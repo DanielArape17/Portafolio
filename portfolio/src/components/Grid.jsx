@@ -10,9 +10,9 @@ import WhatsappCard from "./Card/WhatsappCard";
 import AllProjectsCard from "./Card/AllProjectsCard"
 import LinkedinCard from "./Card/LinkedinCard";
 import SoftSkillsCard from "./Card/SoftSkillsCard"
-import TwoProjectCard from "./Card/TwoProjectCard"
 import AboutMeCard from "./Card/AboutMeCard"
 import CardTiltWrapper from "@/components/CardTiltWrapper";
+import CatRoomCard from "./Card/CatRoomCard";
 
 
 export default function Grid() {
@@ -25,7 +25,13 @@ export default function Grid() {
         <LearningCard />
 
         {/* === Fila 2 === */}
-        <ProjectCard />
+        <ProjectCard
+          image="/images/Rick_and_Morty.png"
+          title="Rick & Morty Explorer"
+          description="Interfaz animada para explorar personajes usando la API oficial."
+          tech={["React", "GSAP", "TailwindCSS"]}
+          link="https://tu-demo.com"
+        />
         <TechCard />
         <GithubCard />
 
@@ -35,7 +41,7 @@ export default function Grid() {
         <LinkedinCard />
 
         {/* === Fila 4 === */}
-        <TwoProjectCard />
+        <CatRoomCard />
         <SoftSkillsCard />
         <AboutMeCard />
       </div>
