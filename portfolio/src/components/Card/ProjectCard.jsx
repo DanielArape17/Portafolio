@@ -1,10 +1,10 @@
 import CardBase from "./CardBase";
 
-export default function ProjectCard({ image, title, description, tech = [], link }) {
+export default function ProjectCard({ cols = 5, rows = 2, image, title, description, tech = [], link }) {
   return (
     <CardBase
-  cols={5}
-  rows={2}
+  cols={cols}
+  rows={rows}
   className=" bg-[#111] rounded-2xl overflow-hidden
   shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
 >

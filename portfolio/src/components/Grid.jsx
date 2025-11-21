@@ -13,7 +13,7 @@ import SoftSkillsCard from "./Card/SoftSkillsCard"
 import AboutMeCard from "./Card/AboutMeCard"
 import CardTiltWrapper from "@/components/CardTiltWrapper";
 import CatRoomCard from "./Card/CatRoomCard";
-
+import ProjectsSection from "./ProjectsSection";
 
 export default function Grid() {
   return (
@@ -26,6 +26,8 @@ export default function Grid() {
 
         {/* === Fila 2 === */}
         <ProjectCard
+          cols={5}
+          rows={2}
           image="/images/Rick_and_Morty.png"
           title="Rick & Morty Explorer"
           description="Interfaz animada para explorar personajes usando la API oficial."
@@ -45,6 +47,8 @@ export default function Grid() {
         <SoftSkillsCard />
         <AboutMeCard />
       </div>
+      
+      <ProjectsSection />
     </CardTiltWrapper>
   );
 }
