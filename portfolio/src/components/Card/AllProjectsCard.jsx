@@ -1,5 +1,6 @@
 import CardBase from "./CardBase";
 import PulseButton from "@/components/ui/PulseButton";
+import { gsap } from "gsap";
 import { useLanguageSelector } from "@/hooks/useLanguageSelector";
 
 
@@ -8,8 +9,7 @@ export default function AllProjectsCard() {
 
   return(
     <CardBase
-      cols={8}
-      rows={2}
+      cols={4} lgCols={8} rows={2}
       className="relative bg-[url('/images/All_my_projects_two.webp')] bg-cover bg-center text-white flex flex-col rounded-2xl shadow-[0_0_20px_rgba(255,122,92,0.15)]"
     >
       <div className="absolute inset-0 bg-gradient-to-t from-[#1F1728]/90 via-[#1F1728]/60 to-transparent "></div>
@@ -24,10 +24,21 @@ export default function AllProjectsCard() {
             : "Explore my work, creative process, and coding experiments."}
         </p>
 
-        <PulseButton href="/proyectos" size="md">
+        <PulseButton
+          href="#proyectos"
+          size="md"
+          onClick={(e) => {
+            e.preventDefault();
+            const el = document.querySelector('#proyectos');
+            if (el) {
+              const y = el.getBoundingClientRect().top + window.pageYOffset - 64;
+              window.scrollTo({ top: y, behavior: 'smooth' });
+            }
+          }}
+        >
           {isSpanish ? "Ver todos los proyectos" : "View all projects"}
         </PulseButton>
-        <p className="text-xs text-[#8E8AAE] mt-2">{isSpanish ? "+6 proyectos publicados" : "+6 published projects"}</p>
+        <p className="text-xs text-[#8E8AAE] mt-2">{isSpanish ? "+3 proyectos publicados" : "+6 published projects"}</p>
       </div>
     </CardBase>
   );

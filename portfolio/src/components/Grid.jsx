@@ -12,13 +12,14 @@ import LinkedinCard from "./Card/LinkedinCard";
 import SoftSkillsCard from "./Card/SoftSkillsCard"
 import AboutMeCard from "./Card/AboutMeCard"
 import CardTiltWrapper from "@/components/CardTiltWrapper";
-import CatRoomCard from "./Card/CatRoomCard";
+//import CatRoomCard from "./Card/CatRoomCard";
+import CurrentProject from "./Card/CurrentProject";
 import ProjectsSection from "./ProjectsSection";
 
 export default function Grid() {
   return (
     <CardTiltWrapper>
-      <div className="grid grid-cols-12 grid-rows-8 gap-4 cursor-default">
+      <div className="grid grid-cols-4 lg:grid-cols-12 gap-4 cursor-default">
         {/* === Fila 1 === */}
         <HeroCard />
         <LanguageCard />
@@ -28,11 +29,11 @@ export default function Grid() {
         <ProjectCard
           cols={5}
           rows={2}
-          image="/images/Rick_and_Morty.png"
+          image="/images/Rick_and_Morty.webp"
           title="Rick & Morty Explorer"
           description="Interfaz animada para explorar personajes usando la API oficial."
           tech={["React", "GSAP", "TailwindCSS"]}
-          link="https://tu-demo.com"
+          link="https://danielarape17.github.io/Rick_and_Morty_Characters_Website/"
         />
         <TechCard />
         <GithubCard />
@@ -43,7 +44,7 @@ export default function Grid() {
         <LinkedinCard />
 
         {/* === Fila 4 === */}
-        <CatRoomCard />
+        <CurrentProject />
         <SoftSkillsCard />
         <AboutMeCard />
       </div>
@@ -56,7 +57,7 @@ export default function Grid() {
 {/*
 <div className="grid grid-cols-12 grid-rows-10 gap-4">
   {/* Tarjeta principal 
-  <div className="h-96 col-span-8 row-span-2 p-4 gap-1 bg-[url('/images/Main.JPG')] bg-cover text-white flex flex-col  rounded-2xl shadow-[0_0_20px_rgba(255,122,92,0.15)] ">
+  <div className="h-96 col-span-8 row-span-2 p-4 gap-1 bg-[url('/images/Main.webp')] bg-cover text-white flex flex-col  rounded-2xl shadow-[0_0_20px_rgba(255,122,92,0.15)] ">
     <h1 className="text-5xl font-bold text-[#E7EAF0] drop-shadow-[0_0_5px_rgba(0,0,0,0.5)]">Daniel Arapé</h1>
     <h2 className="text-3xl font-semibold text-[#FF7A5C] mt-1">Full-Stack Developer</h2>
     <p className="text-[#C9C6D0] max-w-2xs mt-2 leading-relaxed">Curioso por naturaleza, disfruto unir la lógica del código con el arte del diseño.</p>
@@ -87,7 +88,7 @@ export default function Grid() {
   </div>
   
   {/* Tarjeta de aprendizaje 
-  <div className="col-span-4 row-span-1 p-5 bg-[url('/images/Estudio.jpg')] bg-cover bg-left rounded-2xl shadow-[0_0_20px_rgba(78,201,240,0.15)] flex flex-col ">
+  <div className="col-span-4 row-span-1 p-5 bg-[url('/images/Estudio.webp')] bg-cover bg-left rounded-2xl shadow-[0_0_20px_rgba(78,201,240,0.15)] flex flex-col ">
     <h2 className="text-xl text-[#FF7A5C] font-semibold mb-1">En Constante Aprendizaje</h2>
     <p className="text-[#E7EAF0]">Estudiante de Ingeniería de Sistemas (9° semestre)</p>
     <p className="text-[#E7EAF0]">Estudiante de Lexpin</p>

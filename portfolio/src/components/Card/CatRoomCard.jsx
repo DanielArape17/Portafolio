@@ -63,7 +63,7 @@ export default function CatRoomCard() {
   }, []);
 
   return (
-    <CardBase cols={6} rows={2}>
+    <CardBase cols={4} lgCols={6} rows={2} className="h-72 lg:h-full">
       <div ref={roomRef} className="relative w-full h-full">
         {/* Fondo de la habitación */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#1f1a33] to-[#0d0b18] rounded-xl"></div>

@@ -12,8 +12,7 @@ export default function TechCard() {
 
   return (
     <CardBase
-      cols={4}
-      rows={2}
+      cols={4} lgCols={4} rows={2}
       className="relative p-4 gap-4 rounded-2xl shadow-[0_0_20px_rgba(78,201,240,0.15)] flex flex-col items-center justify-evenly overflow-hidden"
     >
       <h2 className="text-2xl font-semibold text-[#4EC9F0] z-10">

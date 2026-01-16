@@ -10,6 +10,7 @@ export default function PulseButton({
   textColor = "#1F1728",
   size = "md",
   className = "",
+  onClick,
 }) {
   const btnRef = useRef(null);
 
@@ -39,6 +40,7 @@ export default function PulseButton({
       href={href}
       ref={btnRef}
       aria-label={children}
+      onClick={onClick}
       className={`
         ${sizeStyles[size]} 
         rounded-lg font-semibold shadow-[0_8px_30px_rgba(255,122,92,0.25)] 

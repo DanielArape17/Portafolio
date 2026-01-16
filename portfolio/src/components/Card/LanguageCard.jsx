@@ -8,8 +8,7 @@ export default function CardLanguage() {
 
   return (
     <CardBase
-      cols={4}
-      rows={1}
+      cols={2} lgCols={4} rows={1}
       className="bg-gradient-to-br from-[#2B2235] via-[#3B2A4D] to-[#1F1728]
                 text-white flex flex-col gap-3 items-center justify-center
                 text-center rounded-2xl shadow-[0_0_15px_rgba(255,122,92,0.2)] p-5"

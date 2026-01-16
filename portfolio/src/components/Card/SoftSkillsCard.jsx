@@ -41,10 +41,9 @@ export default function SoftSkillsCard_Reflejos() {
 
   return (
     <CardBase
-      cols={2}
-      rows={2}
+      cols={4} lgCols={2} rows={2}
       className="relative overflow-hidden rounded-2xl p-0.5
-                bg-[url('/images/SoftSkills.jpg')] bg-cover bg-center
+                bg-[url('/images/SoftSkills.webp')] bg-cover bg-center
                 border border-white/10 backdrop-blur-md shadow-[0_0_25px_rgba(255,255,255,0.05)] 
                 flex flex-col items-center justify-evenly"
     >
@@ -55,7 +54,7 @@ export default function SoftSkillsCard_Reflejos() {
         {isSpanish ? "Habilidades Blandas" : "Soft Skills"}
       </h2>
 
-      <div className="flex flex-wrap justify-center z-10 gap-3">
+      <div className="flex flex-wrap justify-center z-10 gap-3 py-4">
         {skills.map((skill, i) => (
           <div
             key={i}

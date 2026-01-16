@@ -6,10 +6,9 @@ export default function AboutMeCard() {
 
   return (
     <CardBase
-      cols={4}
-      rows={2}
+      cols={4} lgCols={4} rows={2}
       className="relative overflow-hidden rounded-2xl p-8
-                bg-[url('/images/AboutMe.jpg')] bg-cover bg-center
+                bg-[url('/images/AboutMe.webp')] bg-cover bg-center
                 border border-white/10 backdrop-blur-md shadow-[0_0_35px_rgba(255,255,255,0.05)]
                 flex flex-col justify-between
                 before:absolute before:inset-0 before:rounded-2xl

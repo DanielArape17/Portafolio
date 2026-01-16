@@ -22,8 +22,7 @@ export default function GithubCard() {
   return (
     <CardBase
       ref={cardRef}
-      cols={3}
-      rows={2}
+      cols={4} lgCols={3} rows={2}
       className="relative overflow-hidden flex flex-col items-center justify-center group border border-transparent hover:border-[#FF7A5C]/40 transition-all duration-500 rounded-2xl"
     >
       {/* Fondo animado */}

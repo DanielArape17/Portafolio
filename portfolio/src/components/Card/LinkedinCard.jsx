@@ -8,8 +8,7 @@ export default function LinkedinCard() {
   
   return(
     <CardBase
-      cols={4}
-      rows={1}
+      cols={2} lgCols={4} rows={1}
       className="relative col-span-4 row-span-1 flex flex-col items-center justify-center rounded-2xl p-1
       bg-gradient-to-br from-[#0A192F]/70 via-[#0A66C2]/20 to-[#1B2A4A]/60 
       backdrop-blur-lg border border-[#0A66C2]/30

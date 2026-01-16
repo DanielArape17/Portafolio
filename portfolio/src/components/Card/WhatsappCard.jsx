@@ -8,8 +8,7 @@ export default function WhatsappCard() {
 
   return(
     <CardBase
-      cols={4}
-      rows={1}
+      cols={2} lgCols={4} rows={1}
       className="relative col-span-4 row-span-1 flex flex-col items-center justify-center rounded-2xl p-1
       bg-gradient-to-br from-[#0A5C38]/60 via-[#0ABF5B]/30 to-[#063B28]/60 
       backdrop-blur-lg border border-[#0ABF5B]/30 

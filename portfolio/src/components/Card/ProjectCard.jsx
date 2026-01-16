@@ -1,10 +1,14 @@
 import CardBase from "./CardBase";
+import { useLanguageSelector } from "@/hooks/useLanguageSelector";
 
 export default function ProjectCard({ cols = 5, rows = 2, image, title, description, tech = [], link }) {
+  const { isSpanish } = useLanguageSelector();
+
+  const buttonText = isSpanish ? "Ver Proyecto" : "View Project";
+
   return (
     <CardBase
-  cols={cols}
-  rows={rows}
+  cols={4} lgCols={cols} rows={rows}
   className=" bg-[#111] rounded-2xl overflow-hidden
   shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
 >
@@ -24,8 +28,8 @@ export default function ProjectCard({ cols = 5, rows = 2, image, title, descript
       ))}
     </div>
 
-    <a className="block text-center mt-2 py-2 rounded-lg bg-white text-black font-semibold hover:bg-neutral-200 transition-all cursor-pointer">
-      Ver Proyecto
+    <a href={link} target="_blank" rel="noopener noreferrer" className="block text-center mt-2 py-2 rounded-lg bg-white text-black font-semibold hover:bg-neutral-200 transition-all">
+      {buttonText}
     </a>
   </div>
 </CardBase>
